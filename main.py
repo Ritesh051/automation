@@ -10,7 +10,7 @@ options = Options()
 options.add_argument("executable_path=chromedriver")
 
 driver = webdriver.Chrome(options=options)
-driver.get("https://www.tendertiger.com/AdvanceTenderSearch.aspx?SerText=Transport+Department%2c&tenders=Transport+Department+tenders")
+driver.get("Enter the URL of the website")
 
 Scopes = [
     'https://www.googleapis.com/auth/spreadsheets',
@@ -18,9 +18,9 @@ Scopes = [
 ]
 
 # Correct the path to your JSON credentials file
-Credentials = ServiceAccountCredentials.from_json_keyfile_name("Auth.json")
+Credentials = ServiceAccountCredentials.from_json_keyfile_name("Your key.json")
 file = gspread.authorize(credentials=Credentials)
-sheet = file.open("Data")
+sheet = file.open("Google sheet Name")
 
 sheet = sheet.sheet1
 
